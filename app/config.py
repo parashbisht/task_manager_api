@@ -9,6 +9,9 @@ class Settings(BaseSettings):
     DATABASE_URL: str
     SECRET_KEY: str = "change-this-secret-key-in-production"
     ACCESS_TOKEN_EXPIRE_MINUTES: int = 60
+    POSTGRES_USER: str = "postgres"
+    POSTGRES_PASSWORD: str = "postgres"
+    POSTGRES_DB: str = "task_manager"
 
     model_config = SettingsConfigDict(env_file=".env", env_file_encoding="utf-8")
 
